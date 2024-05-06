@@ -1,0 +1,10 @@
+{
+    "azureAutomation.directory.basePath": "c:\\Users\\c",
+    "azureFunctions.projectSubpath": "ReactApp1.Functions\\Functions\\FunctionApp1\\FunctionApp1",
+    "azureFunctions.deploySubpath": "ReactApp1.Functions\\Functions\\FunctionApp1\\FunctionApp1/bin/Release/net6.0/publish",
+    "azureFunctions.projectLanguage": "C#",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.preDeployTask": "publish (functions)",
+    "azureFunctions.templateFilter": "All"
+}

@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "activity.check_whitelist_email": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7218",
+      "launchBrowser": false
+    }
+  }
+}

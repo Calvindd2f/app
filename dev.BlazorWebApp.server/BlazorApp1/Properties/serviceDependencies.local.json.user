@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "rabbitmq1": {
+      "restored": true,
+      "restoreTime": "2024-05-05T15:18:41.7798585Z"
+    },
+    "compute.function.windows1": {
+      "restored": true,
+      "restoreTime": "2024-05-05T15:17:14.8342376Z"
+    },
+    "identityapp1": {
+      "restored": true,
+      "restoreTime": "2024-05-05T17:23:08.8961563Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2024-05-05T15:02:48.1960527Z"
+    },
+    "storage1": {
+      "restored": true,
+      "restoreTime": "2024-05-05T15:03:03.4740689Z"
+    }
+  },
+  "parameters": {
+    "compute.function.windows1.resourceGroupName": {
+      "Name": "compute.function.windows1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "activity-node"
+    },
+    "compute.function.windows1.subscriptionId": {
+      "Name": "compute.function.windows1.subscriptionId",
+      "Type": "subscription",
+      "Value": "844323f5-46cb-4676-a00c-dfd259042be1"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ReactApp1.Bot\\O8_Chatbot",
+    "\\ReactApp1.Bot\\O8_Chatbot\\.config",
+    "\\ReactApp1.client\\src",
+    "\\ReactApp1.client\\src\\assets",
+    "\\ReactApp1.Functions\\Functions\\FunctionApp1",
+    "\\ReactApp1.Functions\\Functions\\FunctionApp1\\FunctionApp1",
+    "\\ReactApp1.Functions\\Functions\\FunctionApp1\\FunctionApp1\\Properties",
+    "\\ReactApp1.Functions\\powershell-scripts\\scripts",
+    "\\ReactApp1.Server\\bin\\Release\\net8.0",
+    "\\ReactApp1.Server\\obj\\Debug"
+  ],
+  "SelectedNode": "\\.chat",
+  "PreviewInSolutionExplorer": false
+}

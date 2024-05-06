@@ -1,0 +1,217 @@
+# Standard Change 
+#- task: change_standard_action
+conditions:
+- name: 'client_filter'
+  optMode: 'OptOut'
+  category: 'Change Request'
+
+- name: 'chat'
+  option_button: 'Standard Change'
+  option_text: 'Change Request'
+  option_category: 'Change Request'
+
+steps:
+- task: chat_interaction
+  alias: changechoice
+  inputs:
+    text: 'Select Change'
+    form_name: 'change_request'
+    form_def: '{"tree_inline_cr": [ { "children": [ { "children": [], "isExpanded": false, "text": "Changes", "value": "Changes" }, { "children": [], "isExpanded": false, "text": "Azure - Add Credits to  portal", "value": "Azure - Add Credits to  portal" }, { "children": [], "isExpanded": false, "text": "Amend spelling of names/companies in M365/Windows login", "value": "Amend spelling of names/companies in M365/Windows login" }, { "children": [], "isExpanded": false, "text": "Datto RMM Agent install", "value": "Datto RMM Agent install" }, { "children": [], "isExpanded": false, "text": "Bitdefender installation", "value": "Bitdefender installation" }, { "children": [], "isExpanded": false, "text": "Create New User O365 AD", "value": "Create New User O365 AD" }, { "children": [], "isExpanded": false, "text": "Cold ReBoot Datto Backup Server", "value": "Cold ReBoot Datto Backup Server" }, { "children": [], "isExpanded": false, "text": "Firewall - Fortigate disable TLS1.1", "value": "Firewall - Fortigate disable TLS1.1" }, { "children": [], "isExpanded": false, "text": "Open Port for Security camera", "value": "Open Port for Security camera" }, { "children": [], "isExpanded": false, "text": "Whitelist or Blacklist website", "value": "Whitelist or Blacklist website" }, { "children": [], "isExpanded": false, "text": "TXT records Add or Remove", "value": "TXT records Add or Remove" }, { "children": [], "isExpanded": false, "text": "Enable Auto Renew for domain", "value": "Enable Auto Renew for domain" }, { "children": [], "isExpanded": false, "text": "Manual disk clean up", "value": "Manual disk clean up" }, { "children": [], "isExpanded": false, "text": "O365 - Add email flow rule", "value": "O365 - Add email flow rule" }, { "children": [], "isExpanded": false, "text": "Add user to Security group", "value": "Add user to Security group" }, { "children": [], "isExpanded": false, "text": "Add user to Distribution Group", "value": "Add user to Distribution Group" }, { "children": [], "isExpanded": false, "text": "Create New VPN user Fortigate", "value": "Create New VPN user Fortigate" }, { "children": [], "isExpanded": false, "text": "SSL VPN Setup on Sonicwall", "value": "SSL VPN Setup on Sonicwall" }, { "children": [], "isExpanded": false, "text": "Grant Access to Fasthost DNS", "value": "Grant Access to Fasthost DNS" }, { "children": [], "isExpanded": false, "text": "Add - Change Nameserver Hosting", "value": "Add - Change Nameserver Hosting" }, { "children": [], "isExpanded": false, "text": "Change DNS record", "value": "Change DNS record" }, { "children": [], "isExpanded": false, "text": "White List Email Office 365", "value": "White List Email Office 365" }, { "children": [], "isExpanded": false, "text": "Update SMTP for scanning to email from a device", "value": "Update SMTP for scanning to email from a device" }, { "children": [], "isExpanded": false, "text": "Update printer firmware", "value": "Update printer firmware" }, { "children": [], "isExpanded": false, "text": "Allow or Restrict External Sender''s to send to distribution group", "value": "Allow or Restrict External Sender''s to send to distribution group" }, { "children": [], "isExpanded": false, "text": "Delegate access to email/account", "value": "Delegate access to email/account" }, { "children": [], "isExpanded": false, "text": "Enable MFA for Intuity Admin", "value": "Enable MFA for Intuity Admin" }, { "children": [], "isExpanded": false, "text": "White List Email SpamTitan", "value": "White List Email SpamTitan" }, { "children": [], "isExpanded": false, "text": "Install Office Apps on Terminal server", "value": "Install Office Apps on Terminal server" }, { "children": [], "isExpanded": false, "text": "Password reset", "value": "Password reset" }, { "children": [], "isExpanded": false, "text": "Add Disclaimer to Email Header or Footer Office 365 Exchange Online", "value": "Add Disclaimer to Email Header or Footer Office 365 Exchange Online" }, { "children": [], "isExpanded": false, "text": "Bright pay update", "value": "Bright pay update" }, { "children": [], "isExpanded": false, "text": "BrightPay Update Install", "value": "BrightPay Update Install" }, { "children": [], "isExpanded": false, "text": "Remove User From Office 365 Global Address List", "value": "Remove User From Office 365 Global Address List" }, { "children": [], "isExpanded": false, "text": "Create Shared Mailbox and Delegate User Access", "value": "Create Shared Mailbox and Delegate User Access" }, { "children": [], "isExpanded": false, "text": "Grant Access to File or Folder", "value": "Grant Access to File or Folder" }, { "children": [], "isExpanded": false, "text": "Disable User Accounts", "value": "Disable User Accounts" }, { "children": [], "isExpanded": false, "text": "Aran / Proxy Train Track Install and ODBC connection Setup", "value": "Aran / Proxy Train Track Install and ODBC connection Setup" }, { "children": [], "isExpanded": false, "text": "Adding Teams License for Phone and Assign Number to User", "value": "Adding Teams License for Phone and Assign Number to User" }, { "children": [], "isExpanded": false, "text": "Add Static Route on PC server in CMD", "value": "Add Static Route on PC server in CMD" }, { "children": [], "isExpanded": false, "text": "Bundles: KnowBe4", "value": "Bundles: KnowBe4" }, { "children": [], "isExpanded": false, "text": "Bundles: Octiga, Whitelisting & Security Baselines", "value": "Bundles: Octiga, Whitelisting & Security Baselines" }, { "children": [], "isExpanded": false, "text": "Bundles: Datto SaaS & BitDefender", "value": "Bundles: Datto SaaS & BitDefender" }, { "children": [], "isExpanded": false, "text": "Apply SoftEther SSL cert", "value": "Apply SoftEther SSL cert" }, { "children": [], "isExpanded": false, "text": "Replacement PC Setup", "value": "Replacement PC Setup" }, { "children": [], "isExpanded": false, "text": "New PC Setup for New User", "value": "New PC Setup for New User" }, { "children": [], "isExpanded": false, "text": "Intuity Connect - Install using Datto Rmm", "value": "Intuity Connect - Install using Datto Rmm" }, { "children": [], "isExpanded": false, "text": "Expand Disc In vSphere Client", "value": "Expand Disc In vSphere Client" }, { "children": [], "isExpanded": false, "text": "Provisio Phishing Sim Whitelisting Datto & M365 White Listing ", "value": "Provisio Phishing Sim Whitelisting Datto & M365 White Listing " }, { "children": [], "isExpanded": false, "text": "Quantum Email SMTP Setup", "value": "Quantum Email SMTP Setup" }, { "children": [], "isExpanded": false, "text": "Transfer Existing 365 License", "value": "Transfer Existing 365 License" }, { "children": [], "isExpanded": false, "text": "Increasing a customer’s Stryve OBM storage customer", "value": "Increasing a customer’s Stryve OBM storage customer" }, { "children": [], "isExpanded": false, "text": "Deploy temporary install admin", "value": "Deploy temporary install admin" }, { "children": [], "isExpanded": false, "text": "Bootable Screenshot errors", "value": "Bootable Screenshot errors" }, { "children": [], "isExpanded": false, "text": "Windows Hello Activation", "value": "Windows Hello Activation" }, { "children": [], "isExpanded": false, "text": "Datto SaaS Block or Allow Sender", "value": "Datto SaaS Block or Allow Sender" }, { "children": [], "isExpanded": false, "text": "Bit Defender Whitelisting", "value": "Bit Defender Whitelisting" }, { "children": [], "isExpanded": false, "text": " DNS - Web v Server Conflict", "value": " DNS - Web v Server Conflict" }, { "children": [], "isExpanded": false, "text": "JML Intuity Leaver", "value": "JML Intuity Leaver" }, { "children": [], "isExpanded": false, "text": "JML Intuity New Starter", "value": "JML Intuity New Starter" }, { "children": [], "isExpanded": false, "text": "WhiteList Allow/Block  File Datto SaaS Protection", "value": "WhiteList Allow/Block  File Datto SaaS Protection" }, { "children": [], "isExpanded": false, "text": "Email Forwarding 365", "value": "Email Forwarding 365" }, ], "isExpanded": true, "text": "Standard Changes List", "value": "option_a" } ] }'
+    form_display_mode: 'Embed'
+
+###[ process and display the selected change.]###
+- task: inline_powershell
+  alias: selected_change_processor
+  inputs:
+    selectedChange: =changechoice.form.tree_inline_cr
+    script: |
+      # Convert the selectedChange JSON string to a PowerShell array
+      $selectedChange = $selectedChange | ConvertFrom-Json
+
+      # The actual change is the second element in the array
+      $actualChange = $selectedChange[1]
+
+      # We will reference it as SelectedChangeText
+      return @{ SelectedChangeText = $actualChange }
+
+
+- task: chat_interaction
+  ###[ echo change in chat ]###
+  inputs:
+    text: 'You have selected: {=selected_change_processor.SelectedChangeText}'
+
+#============================
+#############################
+#####[ Standard Change ]#####
+#############################
+# Reference Activity change_standard_action
+# Going to explain functions for context as it was taken from a flow so the functions are all api stuffs.
+# GetCurrentTicket Info
+# CreateChangeTicket
+# GetChangeTicketInfo
+# AddNoteToOriginalTicket
+#============================
+
+###[ GetCurrentTicket Info ]###
+- task: inline_powershell
+  alias: get_ticket_info
+  inputs:
+    ApiIntegrationCode: $AT_API_Code
+    UserName: $AT_Username
+    Secret: $AT_Secret
+    TicketID: $Ctx_AT_Ticket_Id
+    script: |
+      Add-Type -a system.web
+
+      Function Get-CurrentTicketInfo {
+          param (
+              [string]$ApiIntegrationCode,
+              [string]$UserName,
+              [string]$Secret,
+              [string]$TicketID,
+              [int]$retry = 5
+          )
+
+          $success = $false
+          $WaitTime = 30
+          $RetryCount = 0
+          $RetryCodes = @(503, 504, 520, 521, 522, 524)
+
+          $headers = @{
+              "ApiIntegrationCode" = $ApiIntegrationCode
+              "UserName" = $UserName
+              "Secret" = $Secret
+              "Content-Type" = "application/json"
+          }
+
+          $uri = "https://webservices19.autotask.net/atservicesrest/v1.0/Tickets/$TicketID"
+
+          while ($RetryCount -lt $retry -and $success -eq $false) {
+              try {
+                  $ExistingTicketData = Invoke-RestMethod -Method Get -Uri $uri -Headers $headers
+                  $ExistingTicketData = $ExistingTicketData.item
+
+                  # Debugging
+                  Write-Host "Headers: $($headers | Out-String)"
+                  Write-Host "URI: $uri"
+
+                  return @{
+                      "CreatorResource" = $ExistingTicketData.creatorResourceID
+                      "ExistingTicketData" = $ExistingTicketData
+                      "headers" = $headers
+                  }
+
+                  $success = $true
+              } catch {
+                  Write-Host "WARNING: $($_.Exception.Message)"
+                  $ErrorCode = $_.Exception.InnerException.Response.StatusCode
+                  if ($ErrorCode -in $RetryCodes) {
+                      $RetryCount++
+                      if ($RetryCount -eq $retry) {
+                          Write-Host "WARNING: Retry limit reached."
+                      } else {
+                          Write-Host "Waiting $WaitTime seconds."
+                          Start-Sleep -seconds $WaitTime
+                          Write-Host "Retrying."
+                      }
+                  } else {
+                      return $null
+                  }
+              }
+          }
+          return $null
+      }
+      Get-CurrentTicketInfo
+
+
+- task: inline_powershell
+  # CreateChangeTicket
+  alias: create_change_ticket
+  inputs:
+    selectedChange: =selected_change_processor.SelectedChangeText
+    ApiIntegrationCode: $AT_API_Code
+    UserName: $AT_Username
+    Secret: $AT_Secret
+    ExistingTicketData: =get_ticket_info.ExistingTicketData # This is not working.
+    script: "Add-Type -a system.web\n                    #magic___^_^___line\nFunction Create-ChangeTicket {\n    param (\n        [string]$selectedChange,\n        [string]$ApiIntegrationCode,\n        [string]$UserName,\n        [string]$Secret,\n        [string]$ExistingTicketData,\n        [int]$retry = 5\n    )\n                    #magic___^_^___line\n    $success = $false\n    $WaitTime = 30\n    $RetryCount = 0\n    $RetryCodes = @(503, 504, 520, 521, 522, 524)\n                    #magic___^_^___line\n    $headers = @{\n        \"ApiIntegrationCode\" = $ApiIntegrationCode\n        \"UserName\" = $UserName\n        \"Secret\" = $Secret\n        \"Content-Type\" = \"application/json\"\n    }\n                    #magic___^_^___line\n    $uri = \"https://webservices19.autotask.net/atservicesrest/v1.0/Tickets/\"\n    $json = @{\n        \"title\" = \"PIA Change Request - test\"\n        \"companyID\" = 0\n        \"assignedResourceID\" = 29682914\n        \"QueueID\" = 29682969\n        \"dueDateTime\" = \"2030-03-21T00:00:00\"\n        \"priority\" = 2\n        \"status\" = 24\n        \"ticketType\" = 4\n        \"source\" = 14\n        \"issueType\" = 47\n        \"subIssueType\" = 341\n    }\n                    #magic___^_^___line\n    $body = $json | ConvertTo-Json -Depth 10\n                    #magic___^_^___line\n    while ($RetryCount -lt $retry -and $success -eq $false) {\n        try {\n            $request = [System.Net.HttpWebRequest]::Create($uri)\n            $request.Method = \"POST\"\n            $request.ContentType = \"application/json\"\n            $request.Headers.Add(\"ApiIntegrationCode\", $ApiIntegrationCode)\n            $request.Headers.Add(\"UserName\", $UserName)\n            $request.Headers.Add(\"Secret\", $Secret)\n                    #magic___^_^___line\n            $requestWriter = New-Object System.IO.StreamWriter $request.GetRequestStream()\n            $requestWriter.Write($body)\n            $requestWriter.Flush()\n            $requestWriter.Close()\n                    #magic___^_^___line\n            $response = $request.GetResponse()\n            $reader = New-Object System.IO.StreamReader $response.GetResponseStream()\n            $jsonResult = $reader.ReadToEnd()\n            $response.Dispose()\n                    #magic___^_^___line\n            $newTicket = $jsonResult | ConvertFrom-Json\n            $newTicketid = $newTicket.itemId\n                    #magic___^_^___line\n            # Debugging\n            Write-Host \"Headers: $($headers | Out-String)\"\n            Write-Host \"URI: $uri\"\n            Write-Host \"Body: $body\"\n                    #magic___^_^___line\n            return @{\n                \"id\" = $newTicketid\n            }\n                    #magic___^_^___line\n            $success = $true\n        } catch {\n            Write-Host \"WARNING: $($_.Exception.Message)\"\n            $ErrorCode = $_.Exception.InnerException.Response.StatusCode\n            if ($ErrorCode -in $RetryCodes){\n                $RetryCount++\n                if ($RetryCount -eq $retry) {\n                    Write-Host \"WARNING: Retry limit reached.\" \n                } else {\n                    Write-Host \"Waiting $WaitTime seconds.\"\n                    Start-Sleep -seconds $WaitTime\n                    Write-Host \"Retrying.\"                    \n                }\n            } else {\n                return $null\n            }\n        }\n    }\n    return $null\n}\nCreate-ChangeTicket\n                    #magic___^_^___line\n                    #magic___^_^___line\n"
+- task: inline_powershell
+  # GetChangeTicketInfo
+  alias: get_change_ticket
+  inputs:
+    changeTicketId: =create_change_ticket.id
+    ApiIntegrationCode: $AT_API_Code
+    UserName: $AT_Username
+    Secret: $AT_Secret
+    script: |
+      Add-Type -a system.web
+      Function Get-CurrentTicketInfo {
+          param (
+              [string]$ApiIntegrationCode,
+              [string]$UserName,
+              [string]$Secret,
+              [string]$TicketID,
+              [int]$retry = 5
+          )
+
+          $success = $false
+          $WaitTime = 30
+          $RetryCount = 0
+          $RetryCodes = @(503, 504, 520, 521, 522, 524)
+
+          $headers = @{
+              "ApiIntegrationCode" = $ApiIntegrationCode
+              "UserName" = $UserName
+              "Secret" = $Secret
+              "Content-Type" = "application/json"
+          }
+
+          $uri = "https://webservices19.autotask.net/atservicesrest/v1.0/Tickets/$TicketID"
+
+          while ($RetryCount -lt $retry -and $success -eq $false) {
+              try {
+                  $ExistingTicketData = Invoke-RestMethod -Method Get -Uri $uri -Headers $headers
+                  $ExistingTicketData = $ExistingTicketData.item
+
+                  # Debugging
+                  Write-Host "Headers: $($headers | Out-String)"
+                  Write-Host "URI: $uri"
+
+                  return @{
+                      "CreatorResource" = $ExistingTicketData.creatorResourceID
+                      "ExistingTicketData" = $ExistingTicketData
+                      "headers" = $headers
+                  }
+
+                  $success = $true
+              } catch {
+                  Write-Host "WARNING: $($_.Exception.Message)"
+                  $ErrorCode = $_.Exception.InnerException.Response.StatusCode
+                  if ($ErrorCode -in $RetryCodes) {
+                      $RetryCount++
+                      if ($RetryCount -eq $retry) {
+                          Write-Host "WARNING: Retry limit reached."
+                      } else {
+                          Write-Host "Waiting $WaitTime seconds."
+                          Start-Sleep -seconds $WaitTime
+                          Write-Host "Retrying."
+                      }
+                  } else {
+                      return $null
+                  }
+              }
+          }
+          return $null
+      }
+      Get-CurrentTicketInfo
+
+- task: inline_powershell
+  # AddNoteToOriginalTicket
+  alias: add_note_to_original_ticket
+  inputs:
+    ApiIntegrationCode: $AT_API_Code
+    UserName: $AT_Username
+    Secret: $AT_Secret
+    TicketID: $Ctx_AT_Ticket_Id
+    ChangeNumber: =get_change_ticket.ticketNumber
+    Change: =selected_change_processor.SelectedChangeText
+    script: "Function AutoTask-Create-NoteData() \n{\n    if([string]::IsNullOrEmpty($note_id)){\n        Write-Host \"Creating new ticket notes\"\n                    #magic___^_^___line\n        $noteData = @{}\n        $noteData += @{title = \"Note from Pia\"}\n        $noteData += @{description = \"$text\"}\n        $noteData += @{ticketID = $AT_Ticket_Id}\n        $noteData += @{noteType = 3}\n        #Checks Type of Note\n        switch($type){\n            \"discussion\" {\n                $noteData += @{publish = 1}\n            }\n            \"internal\" {\n                $noteData += @{publish = 2}\n            }\n            default {\n                Write-Error \"No 'Type' Selected. Please use either: 'discussion' or 'internal'\"\n                $activityOutput.success = $false;\n                return;\n            }\n        }\n                    #magic___^_^___line\n        $res = AT-CreateTicketNote -note_data $noteData\n                    #magic___^_^___line\n        $activityOutput.out.note_id = \"$($res.itemId)\"\n    }\n    elseif(![string]::IsNullOrEmpty($note_id) -and ![string]::IsNullOrEmpty($text)){\n        Write-Host \"Appending to existing note.\"\n        $originalNote = AT-GetTicketNote -note $note_id -ticket $AT_Ticket_Id\n        $originalNote.description += \"`n`r$text\"\n        $appendNote = AT-AppendTicketNote -note_data $originalNote\n        $activityOutput.out.note_id = \"$($appendNote.itemId)\"\n    }\n    $activityOutput.success = $true;\n    return;\n}\n                    #magic___^_^___line\nFunction AT-CreateTicketNote($note_data, $retry=5){\n                    #magic___^_^___line\n    $success = $false\n    $RetryCodes = @(503, 504, 520, 521, 522, 524)\n    $WaitTime = 30\n    $count = 0\n                    #magic___^_^___line\n    $json = $(ConvertTo-Json $note_data -depth 5)\n    Write-Host $json\n    do{\n        try{        \n            $request = [System.Net.HttpWebRequest]::Create(\"$AT_Webservice/Tickets/$($note_data.ticketID)/Notes\")\n                    #magic___^_^___line\n            $request.Method = \"POST\";\n            $request.ContentType =  \"application/json\";\n            $request.Headers[\"ApiIntegrationCode\"] = $ApiIntegrationCode;\n            $request.Headers[\"UserName\"] = $Username;\n            $request.Headers[\"Secret\"] = $Secret;\n            $request.Timeout = 10000\n                    #magic___^_^___line\n            $requestWriter = New-Object System.IO.StreamWriter $request.GetRequestStream();\n            $requestWriter.Write($json);\n            $requestWriter.Flush();\n            $requestWriter.Close();\n                    #magic___^_^___line\n            $response = $request.GetResponse();\n            $reader = new-object System.IO.StreamReader $response.GetResponseStream();\n            $jsonResult = $reader.ReadToEnd();\n            $response.Dispose();\n                    #magic___^_^___line\n            $success = $true\n            $count = $retry\n                    #magic___^_^___line\n            return $(ConvertFrom-Json $jsonResult);\n        } catch {\n            Write-Host \"WARNING: $($_.Exception.Message)\"\n            $ErrorCode = $_.Exception.InnerException.Response.StatusCode\n            if ($ErrorCode -in $RetryCodes){\n                $count++\n                if ($RetryCount -eq $retry) {\n                    Write-host \"WARNING: Retry limit reached.\" \n                } else {\n                    Write-host \"Waiting $WaitTime seconds.\"\n                    Start-Sleep -seconds $WaitTime\n                    Write-host \"Retrying.\"                    \n                }\n            } else {\n                return $null;\n            }\n        }\n    }while($count -lt $retry -and $success -eq $false)\n    return $null;\n}\nAutoTask-Create-NoteData\nAT-CreateTicketNote\n"

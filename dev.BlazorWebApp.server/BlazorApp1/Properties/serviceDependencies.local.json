@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "storage1": {
+      "secretStore": "LocalSecretsFile",
+      "type": "storage.emulator",
+      "connectionId": "local-storage-azurite"
+    },
+    "compute.function.windows1": {
+      "group": "connections",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/activity-node",
+      "type": "compute.function.windows.consumption"
+    },
+    "rabbitmq1": {
+      "containerPorts": "5672:5672,15672:15672",
+      "secretStore": "LocalSecretsFile",
+      "containerName": "rabbitmq",
+      "containerImage": "rabbitmq:3-management-alpine",
+      "type": "rabbitmq.container",
+      "connectionId": "local-storage:rabbitmq"
+    },
+    "identityapp1": {
+      "connectionInfo": "App registration: o8 Orchestrator / Bot, Tenant: Calvinbergin212@gmail.com Entra instance (calvinbergin212gmail.onmicrosoft.com - Microsoft Entra ID)",
+      "secretStore": null,
+      "type": "identityapp.secretStore",
+      "connectionId": "AzureAD:ClientSecret"
+    }
+  }
+}

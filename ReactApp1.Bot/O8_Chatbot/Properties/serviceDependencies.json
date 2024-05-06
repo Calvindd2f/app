@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets"
+    },
+    "signalr1": {
+      "type": "signalr",
+      "connectionId": "Azure:SignalR:ConnectionString"
+    },
+    "storage1": {
+      "type": "storage",
+      "connectionId": "O8.Chatbot.storage"
+    },
+    "rabbitmq1": {
+      "type": "rabbitmq",
+      "connectionId": "ReactBot1.Chatbot.rabbitmq"
+    },
+    "identityapp1": {
+      "type": "identityapp",
+      "connectionId": "AzureAD:ClientSecret"
+    },
+    "compute.function.windows1": {
+      "group": "connections",
+      "type": "compute.function.windows"
+    },
+    "secrets2": {
+      "type": "secrets"
+    }
+  }
+}

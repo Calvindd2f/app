@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "activity.check_email_in_blacklist": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7231",
+      "launchBrowser": false
+    }
+  }
+}

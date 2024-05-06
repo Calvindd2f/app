@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets"
+    },
+    "storage1": {
+      "type": "storage",
+      "connectionId": "local-storage-azurite"
+    },
+    "compute.function.windows1": {
+      "group": "connections",
+      "type": "compute.function.windows"
+    },
+    "rabbitmq1": {
+      "type": "rabbitmq",
+      "connectionId": "local-storage:rabbitmq"
+    },
+    "identityapp1": {
+      "type": "identityapp",
+      "connectionId": "AzureAD:ClientSecret"
+    }
+  }
+}
