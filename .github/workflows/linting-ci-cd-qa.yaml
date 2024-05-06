@@ -1,0 +1,124 @@
+            - name: Azure Functions Action
+  uses: Azure/functions-action@v1.5.1
+  with:
+    # Name of the Azure Function App
+    app-name: 
+    # Path to package or folder. *.zip or a folder to deploy
+    package: # optional, default is .
+    # Function app slot to be deploy to
+    slot-name: # optional
+    # Publish profile (*.publishsettings) file contents with web deploy secrets
+    publish-profile: # optional
+    # Automatically look up Java function app artifact from pom.xml (default: 'false'). When this is set to 'true', 'package' should point to the folder of host.json.
+    respect-pom-xml: # optional, default is false
+    # Remove unwanted files defined in .funcignore file (default: 'false'). When this is set to 'true', 'package' should point to the folder of host.json.
+    respect-funcignore: # optional, default is false
+    # Enable build action from Kudu when the package is deployed onto the function app. This will temporarily change the SCM_DO_BUILD_DURING_DEPLOYMENT setting for this deployment. To bypass this and use the existing settings from your function app, please set this to an empty string ''. To enable remote build for your project, please set this and 'enable-oryx-build' both to 'true'. By default, GitHub Action respects the packages resolved in GitHub workflow, disabling the redundant build action from Kudu endpoint. (default: 'false').
+    scm-do-build-during-deployment: # optional, default is false
+    # Use Oryx Build from Kudu when the package is deployed onto the function app. (Linux functions only). This will temporarily change the ENABLE_ORYX_BUILD setting from this deployment. To bypass this and use the existing settings from your function app, please set this to an empty string ''. To enable remote build for your project, please set this and 'scm-do-build-during-deployment' both to 'true'. By default, GitHub Action respects the packages resolved in GitHub workflow, disabling the redundant build action from Kudu endpoint. (default: 'false').
+    enable-oryx-build: # optional, default is false
+
+
+# Probably going to do some dynamic formatting generation
+            - name: Azure PowerShell Action
+  uses: Azure/powershell@v2
+  with:
+    # Specify the Az PowerShell script here.
+    inlineScript: 
+    # Azure PS version to be used to execute the script, example: 1.8.0, 2.8.0, 3.4.0. To use the latest version, specify "latest".
+    azPSVersion: 
+    # Select the value of the ErrorActionPreference variable for executing the script. Options: stop, continue, silentlyContinue. Default is Stop.
+    errorActionPreference: # optional, default is Stop
+    # If this is true, this task will fail if any errors are written to the error pipeline, or if any data is written to the Standard Error stream.
+    failOnStandardError: # optional, default is false
+    # Used to pull Az module from Azure/az-ps-module-versions.  Since there's a default, this is typically not supplied by the user.
+    githubToken: # optional, default is ${{ github.token }}
+
+# Github auto-format
+	            - name: github-action-auto-format
+  # You may pin to the exact commit or the version.
+  # uses: cloudposse/github-action-auto-format@970af4c15a720047204400fe5b5ae52fb2991e9b
+  uses: cloudposse/github-action-auto-format@v0.12.0
+  with:
+    # The path on the github-runner where the auto-format action scripts are checked out at runtime
+    actions-files-checkout-path: # optional, default is github-action-auto-format
+    # GitHub username for writing new commits
+    bot-name: # optional, default is cloudpossebot
+    # Email address associated with the GitHub user for writing new commits
+    bot-email: # optional
+    # Name of formatting task to execute. (Options include: readme, github, terraform, and context.)
+    format-task: 
+    # GitHub Token for use in `github_format.sh` and PR creation steps. This token must be granted `workflows` permissions.
+    workflow-token: 
+
+# Gneric Sonar Scan
+            - name: Sonar Scan
+  # You may pin to the exact commit or the version.
+  # uses: sijomc/sonarscan-action@5a3a0c0eacbe76ac7c3e3513696f7449f4f914a5
+  uses: sijomc/sonarscan-action@1.1
+  with:
+    # SonarQube server URL
+    host: 
+    # The project's unique key. Allowed characters are: letters, numbers, -, _, . and :, with at least one non-digit.
+    projectKey: # optional, default is 
+    # Name of the project that will be displayed on the web interface.
+    projectName: # optional, default is 
+    # The project version.
+    projectVersion: # optional, default is 
+    # Set the sonar.projectBaseDir analysis property
+    projectBaseDir: # optional, default is .
+    # Exclude directories from scanning
+    exclusions: # optional
+    # Login or authentication token of a SonarQube user
+    login: 
+    # Password that goes with the sonar.login username. This should be left blank if an authentication token is being used.
+    password: # optional
+    # Sonar Scanner options for memory optimization
+    scannerOptions: # optional
+
+# SonarQube dotnet
+                      - name: dotnet-sonar-scanner
+  # You may pin to the exact commit or the version.
+  # uses: chill-viking/dotnet-sonar-scanner@56713d7a4b5cc15f82a60ec869e13bf9eaa59fe5
+  uses: chill-viking/dotnet-sonar-scanner@v2.0.0
+  with:
+    # Key for Sonar project
+    sonar-project-key: 
+    # Key for Sonar organisation
+    sonar-org-key: 
+    # GitHub token
+    token: 
+    # Sonar token to use for authenticating with Sonar
+    sonar-token: # optional
+    # Directory to execute `dotnet build` in
+    working-directory: # optional, default is .
+    # .NET SDK to be used
+    dotnet-version: # optional, default is 6.0.x
+    # Project version to use for scan
+    project-version: # optional, default is 
+    # Should action perform checkout of repo itself
+    checkout: # optional, default is true
+
+
+# SonarQube TypeScript
+	             - name: Scan with Sonar Scanner
+  # You may pin to the exact commit or the version.
+  # uses: mathrix-education/sonar-scanner@f40ca3aebb6f72ec4887de752b0d739010122504
+  uses: mathrix-education/sonar-scanner@1.0.0
+  with:
+    # The Sonar Scanner version.
+    version: 
+    # Use the bundled JRE.
+    with-jre: # optional, default is false
+    # Default Sonar Scanner options. Read as a YAML document (you may use the pipe '|' YAML operator).
+    options: # optional
+    # Install TypeScript during setup (simply run `npm i typescript`). Required if your project uses Typescript and if the node module `typescript` is  not already installed.
+
+    typescript: # optional, default is false
+    # Fetch a full clone of the repository. Useful when using the SCM feature of Sonar Scanner.
+    unshallow: # optional, default is false
+    # Run Sonar Scanner immediately in the current working directory.
+    scan: # optional, default is false
+    # Additionnal flag to append during the scan. Ignored if `scan` is false.
+    args: # optional
+          
