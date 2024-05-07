@@ -5,6 +5,11 @@
       "taskLabel": "task-ReactApp1",
       "appliesTo": "/",
       "type": "launch"
+    },
+    {
+      "taskLabel": "task-",
+      "appliesTo": ".gitignore",
+      "type": "launch"
     }
   ]
 }
