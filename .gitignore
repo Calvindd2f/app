@@ -1,1 +1,10 @@
-Readme.md
+.vs/*
+.vs/slnx.sqlite
+dev.Autom8/tools/*
+ReactApp1.Bot/O8_Chatbot/*
+ReactApp1.Bot/O8_Chatbot/obj/*
+ReactApp1.Server/obj/*
+*.cache
+AssemblyInfo.cs
+ReactApp1.Bot/O8_Chatbot/obj/*
+ReactApp1.Bot/O8_Chatbot/obj/Debug/net6.0/

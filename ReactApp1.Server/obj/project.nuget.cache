@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ySooeFIXKnhBXSMUPa2Id39u4dY9ofaMzeVTURiTvNblKHtroCGATUfj4JrqtRLQYLlYMj3cDhxIAplpEHO1pQ==",
+  "dgSpecHash": "vXMfQGJlahVVB6QaKiv6YbvMdm3xt22e6w92tl4uhkxulW5wz5Poql2GQVUaCSlGob7iD+V+jcbr43WgkaHXmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\c\\source\\repos\\ReactApp1\\ReactApp1.Server\\ReactApp1.Server.csproj",
+  "projectFilePath": "c:\\Users\\c\\source\\repos\\ReactApp1\\ReactApp1.Server\\ReactApp1.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\c\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\8.0.4\\microsoft.aspnetcore.spaproxy.8.0.4.nupkg.sha512",
     "C:\\Users\\c\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

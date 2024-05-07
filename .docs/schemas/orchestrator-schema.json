@@ -1,0 +1,216 @@
+{
+	"$schema": "http://[uri]/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"nodes": {
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"$ref": "#/definitions/activity_handler"
+					},
+					{
+						"$ref": "#/definitions/inline_powershell"
+					},
+					{
+						"$ref": "#/definitions/chat_interaction"
+					},
+					{
+						"$ref": "#/definitions/form"
+					}
+				]
+			}
+		}
+	},
+	"definitions": {
+		"activity": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"task": {
+					"type": "object",
+					"properties": {
+						"task": {
+							"type": "string"
+						},
+						"inputs": {
+							"type": "object",
+							"additionalProperties": true
+						}
+					},
+					"required": [
+						"task"
+					]
+				},
+				"details": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "integer"
+						},
+						"createdDate": {
+							"type": "string"
+						},
+						"modifiedDate": {
+							"type": "string"
+						},
+						"createdByUserId": {
+							"type": "integer"
+						},
+						"modifiedByUserId": {
+							"type": "integer"
+						},
+						"activityName": {
+							"type": "string"
+						},
+						"description": {
+							"type": "string"
+						},
+						"powershellCode": {
+							"type": "string"
+						},
+						"variables": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"isRequired": {
+										"type": "boolean"
+									},
+									"defaultValue": { },
+									"optionText": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"name"
+								]
+							}
+						}
+					},
+					"required": [
+						"id",
+						"createdDate",
+						"modifiedDate",
+						"activityName"
+					]
+				}
+			},
+			"required": [
+				"id",
+				"label",
+				"task"
+			]
+		},
+		"inline_powershell": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"step": {
+					"type": "object",
+					"properties": {
+						"task": {
+							"type": "string"
+						},
+						"alias": {
+							"type": "string"
+						},
+						"inputs": {
+							"type": "object",
+							"properties": {
+								"script": {
+									"type": "string"
+								},
+								"additionalInputs": {
+									"type": "object",
+									"additionalProperties": true
+								}
+							},
+							"required": [
+								"script"
+							]
+						}
+					},
+					"required": [
+						"task"
+					]
+				}
+			},
+			"required": [
+				"id",
+				"label",
+				"step"
+			]
+		},
+		"form": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"step": {
+					"type": "object",
+					"properties": {
+						"task": {
+							"type": "string"
+						},
+						"document": {
+							"type": "string"
+						},
+						"alias": {
+							"type": "string"
+						},
+						"inputs": {
+							"type": "object",
+							"properties": {
+								"form_name": {
+									"type": "string"
+								},
+								"form_display_mode": {
+									"type": "string"
+								},
+								"form_def": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"form_name"
+							]
+						}
+					},
+					"required": [
+						"task",
+						"inputs"
+					]
+				}
+			},
+			"required": [
+				"id",
+				"label",
+				"step"
+			]
+		}
+	}
+}
