@@ -1,2 +1,1 @@
-# app
-Orchestrator - Functions inline_powershell,activity_handler,chat_interaction - powershell - nodes - chatbot - ...
+
